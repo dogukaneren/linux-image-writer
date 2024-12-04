@@ -43,7 +43,6 @@ jobs:
         echo 'python3 /usr/share/linux-image-writer/linux-image-writer.py' >> build/linux-image-writer/usr/bin/linux-image-writer
         chmod +x build/linux-image-writer/usr/bin/linux-image-writer
 
-    # 4. .deb Paketini Oluştur
     - name: Build .deb package
       run: |
         fakeroot dpkg-deb --build build/linux-image-writer
